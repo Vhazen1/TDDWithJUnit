@@ -33,7 +33,25 @@ public class CarTest {
 
 	// Create and pass test for deceleration.
 	
+	public void decelerate(int amount){
+		this.speed -= amount;
+		if(this.speed - amount < 0){
+			this.speed = 0;
+		}else{
+			this.speed -= amount;
+		}
+	}
+	
 	// Create and pass test for no deceleration below 0.
+	
+	public void accelerate(int amount){
+		this.speed -= amount;
+		if(this.speed - amount <=10){
+			this.speed = 10;
+		}else{
+			this.speed -= amount;
+		}
+	}
 
 	
-}
+
